@@ -8,85 +8,184 @@
 // underscore tells Sapper not to do that.
 
 const posts = [
-	{
-		title: 'What is Sapper?',
-		slug: 'what-is-sapper',
-		html: `
-			<p>First, you have to know what <a href='https://svelte.dev'>Svelte</a> is. Svelte is a UI framework with a bold new idea: rather than providing a library that you write code with (like React or Vue, for example), it's a compiler that turns your components into highly optimized vanilla JavaScript. If you haven't already read the <a href='https://svelte.dev/blog/frameworks-without-the-framework'>introductory blog post</a>, you should!</p>
-
-			<p>Sapper is a Next.js-style framework (<a href='blog/how-is-sapper-different-from-next'>more on that here</a>) built around Svelte. It makes it embarrassingly easy to create extremely high performance web apps. Out of the box, you get:</p>
-
-			<ul>
-				<li>Code-splitting, dynamic imports and hot module replacement, powered by webpack</li>
-				<li>Server-side rendering (SSR) with client-side hydration</li>
-				<li>Service worker for offline support, and all the PWA bells and whistles</li>
-				<li>The nicest development experience you've ever had, or your money back</li>
-			</ul>
-
-			<p>It's implemented as Express middleware. Everything is set up and waiting for you to get started, but you keep complete control over the server, service worker, webpack config and everything else, so it's as flexible as you need it to be.</p>
-		`
-	},
-
-	{
-		title: 'How to use Sapper',
-		slug: 'how-to-use-sapper',
-		html: `
-			<h2>Step one</h2>
-			<p>Create a new project, using <a href='https://github.com/Rich-Harris/degit'>degit</a>:</p>
-
-			<pre><code>npx degit "sveltejs/sapper-template#rollup" my-app
-			cd my-app
-			npm install # or yarn!
-			npm run dev
-			</code></pre>
-
-			<h2>Step two</h2>
-			<p>Go to <a href='http://localhost:3000'>localhost:3000</a>. Open <code>my-app</code> in your editor. Edit the files in the <code>src/routes</code> directory or add new ones.</p>
-
-			<h2>Step three</h2>
-			<p>...</p>
-
-			<h2>Step four</h2>
-			<p>Resist overdone joke formats.</p>
-		`
-	},
-
-	{
-		title: 'Why the name?',
-		slug: 'why-the-name',
-		html: `
-			<p>In war, the soldiers who build bridges, repair roads, clear minefields and conduct demolitions — all under combat conditions — are known as <em>sappers</em>.</p>
-
-			<p>For web developers, the stakes are generally lower than those for combat engineers. But we face our own hostile environment: underpowered devices, poor network connections, and the complexity inherent in front-end engineering. Sapper, which is short for <strong>S</strong>velte <strong>app</strong> mak<strong>er</strong>, is your courageous and dutiful ally.</p>
-		`
-	},
-
-	{
-		title: 'How is Sapper different from Next.js?',
-		slug: 'how-is-sapper-different-from-next',
-		html: `
-			<p><a href='https://github.com/zeit/next.js'>Next.js</a> is a React framework from <a href='https://vercel.com/'>Vercel</a>, and is the inspiration for Sapper. There are a few notable differences, however:</p>
-
-			<ul>
-				<li>It's powered by <a href='https://svelte.dev'>Svelte</a> instead of React, so it's faster and your apps are smaller</li>
-				<li>Instead of route masking, we encode route parameters in filenames. For example, the page you're looking at right now is <code>src/routes/blog/[slug].svelte</code></li>
-				<li>As well as pages (Svelte components, which render on server or client), you can create <em>server routes</em> in your <code>routes</code> directory. These are just <code>.js</code> files that export functions corresponding to HTTP methods, and receive Express <code>request</code> and <code>response</code> objects as arguments. This makes it very easy to, for example, add a JSON API such as the one <a href='blog/how-is-sapper-different-from-next.json'>powering this very page</a></li>
-				<li>Links are just <code>&lt;a&gt;</code> elements, rather than framework-specific <code>&lt;Link&gt;</code> components. That means, for example, that <a href='blog/how-can-i-get-involved'>this link right here</a>, despite being inside a blob of HTML, works with the router as you'd expect.</li>
-			</ul>
-		`
-	},
-
-	{
-		title: 'How can I get involved?',
-		slug: 'how-can-i-get-involved',
-		html: `
-			<p>We're so glad you asked! Come on over to the <a href='https://github.com/sveltejs/svelte'>Svelte</a> and <a href='https://github.com/sveltejs/sapper'>Sapper</a> repos, and join us in the <a href='https://svelte.dev/chat'>Discord chatroom</a>. Everyone is welcome, especially you!</p>
-		`
-	}
+  {
+    id: 12,
+    date: '2021-03-21T15:45:13',
+    date_gmt: '2021-03-21T15:45:13',
+    guid: { rendered: 'https://www.benoithubert.tk/?p=12' },
+    modified: '2021-03-21T15:45:13',
+    modified_gmt: '2021-03-21T15:45:13',
+    slug: 'cute-animals',
+    status: 'publish',
+    type: 'post',
+    link: 'https://www.benoithubert.tk/2021/03/cute-animals/',
+    title: { rendered: 'Cute animals' },
+    content: {
+      rendered:
+        '\n<div class="wp-block-columns">\n<div class="wp-block-column">\n<figure class="wp-block-image size-large"><img src="https://unsplash.com/photos/JZT_d2mHH1A/download?force=true&amp;w=640" alt=""/><figcaption>Cute pandas</figcaption></figure>\n</div>\n\n\n\n<div class="wp-block-column">\n<figure class="wp-block-image size-large"><img src="https://unsplash.com/photos/ZYtHybjelmw/download?force=true&amp;w=640" alt=""/><figcaption>Cute koala</figcaption></figure>\n</div>\n\n\n\n<div class="wp-block-column">\n<figure class="wp-block-image size-large"><img src="https://unsplash.com/photos/SBnxlHHrEwk/download?force=true&amp;w=640" alt=""/><figcaption>Cute red panda</figcaption></figure>\n</div>\n</div>\n\n\n\n<div class="wp-block-columns">\n<div class="wp-block-column">\n<p>This website aims to demonstrate what you can do with WordPress + Nuxt.js. But it&#8217;s basically a sandbox to help me try things.</p>\n\n\n\n<p>Among other things, I want to debug the shit out of a trainwreck of a WordPress site that I inherited.</p>\n\n\n\n<p>And believe me, a trainwreck it is!</p>\n</div>\n\n\n\n<div class="wp-block-column">\n<figure class="wp-block-image size-large"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Train_wreck_at_Montparnasse_1895.jpg/640px-Train_wreck_at_Montparnasse_1895.jpg" alt=""/><figcaption>That happened in France, yeah right!</figcaption></figure>\n</div>\n</div>\n\n\n\n<div style="background-color:#f2f2f2;color:#32373c" class="wp-block-atomic-blocks-ab-testimonial left-aligned ab-font-size-18 ab-block-testimonial"><div class="ab-testimonial-text"><p>The combo of Thrive Architect + Bridge theme resulted in a massive trainwreck.</p></div><div class="ab-testimonial-info"><h2 class="ab-testimonial-name" style="color:#32373c">Benoît Hubert</h2><small class="ab-testimonial-title" style="color:#32373c">Senior Bullshit Officer, self-employed</small></div></div>\n\n\n\n<div class="wp-block-columns">\n<div class="wp-block-column">\n<figure class="wp-block-image size-large"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Benjamin_West_-_Joshua_passing_the_River_Jordan_with_the_Ark_of_the_Covenant_-_Google_Art_Project.jpg/640px-Benjamin_West_-_Joshua_passing_the_River_Jordan_with_the_Ark_of_the_Covenant_-_Google_Art_Project.jpg" alt=""/><figcaption>Divine revelation</figcaption></figure>\n</div>\n\n\n\n<div class="wp-block-column">\n<p>Out of the many resources I found useful in my journey to salvage the aforementioned trainwreck, I stumbled upon these gems:</p>\n\n\n\n<ul><li><a rel="noreferrer noopener" href="https://pagepipe.com" target="_blank">Pagepipe </a>: a WordPress speed-optimization-focused website</li><li><a rel="noreferrer noopener" href="https://devops-life.com/blog/2019/04/10/state-of-wordpress-in-2019/" target="_blank">How not to be depressed when working with WordPress</a> : an article explaining how to gitify the shit out of your WordPress setup.</li></ul>\n</div>\n</div>\n\n\n\n<p></p>\n',
+      protected: false,
+    },
+    excerpt: {
+      rendered:
+        '<p>This website aims to demonstrate what you can do with WordPress + Nuxt.js. But it&#8217;s basically a sandbox to help me try things. Among other things, I want to debug the shit out of a trainwreck of a WordPress site that I inherited. And believe me, a trainwreck it is! Out of the many resources &hellip; </p>\n<p class="link-more"><a href="https://www.benoithubert.tk/2021/03/cute-animals/" class="more-link">Continue reading<span class="screen-reader-text"> &#8220;Cute animals&#8221;</span></a></p>\n',
+      protected: false,
+    },
+    author: 1,
+    featured_media: 0,
+    comment_status: 'open',
+    ping_status: 'open',
+    sticky: false,
+    template: '',
+    format: 'standard',
+    meta: [],
+    categories: [1],
+    tags: [],
+    featured_image_src: null,
+    featured_image_src_square: null,
+    author_info: {
+      display_name: 'benhubert',
+      author_link: 'https://www.benoithubert.tk/author/benhubert/',
+    },
+    _links: {
+      self: [{ href: 'https://www.benoithubert.tk/wp-json/wp/v2/posts/12' }],
+      collection: [{ href: 'https://www.benoithubert.tk/wp-json/wp/v2/posts' }],
+      about: [{ href: 'https://www.benoithubert.tk/wp-json/wp/v2/types/post' }],
+      author: [
+        {
+          embeddable: true,
+          href: 'https://www.benoithubert.tk/wp-json/wp/v2/users/1',
+        },
+      ],
+      replies: [
+        {
+          embeddable: true,
+          href: 'https://www.benoithubert.tk/wp-json/wp/v2/comments?post=12',
+        },
+      ],
+      'version-history': [
+        {
+          count: 1,
+          href: 'https://www.benoithubert.tk/wp-json/wp/v2/posts/12/revisions',
+        },
+      ],
+      'predecessor-version': [
+        {
+          id: 13,
+          href:
+            'https://www.benoithubert.tk/wp-json/wp/v2/posts/12/revisions/13',
+        },
+      ],
+      'wp:attachment': [
+        { href: 'https://www.benoithubert.tk/wp-json/wp/v2/media?parent=12' },
+      ],
+      'wp:term': [
+        {
+          taxonomy: 'category',
+          embeddable: true,
+          href: 'https://www.benoithubert.tk/wp-json/wp/v2/categories?post=12',
+        },
+        {
+          taxonomy: 'post_tag',
+          embeddable: true,
+          href: 'https://www.benoithubert.tk/wp-json/wp/v2/tags?post=12',
+        },
+      ],
+      curies: [
+        { name: 'wp', href: 'https://api.w.org/{rel}', templated: true },
+      ],
+    },
+  },
+  {
+    id: 1,
+    date: '2021-03-21T12:14:16',
+    date_gmt: '2021-03-21T12:14:16',
+    guid: { rendered: 'https://www.benoithubert.tk/?p=1' },
+    modified: '2021-03-21T15:48:51',
+    modified_gmt: '2021-03-21T15:48:51',
+    slug: 'hello-world',
+    status: 'publish',
+    type: 'post',
+    link: 'https://www.benoithubert.tk/2021/03/hello-world/',
+    title: { rendered: 'Hello world!' },
+    content: {
+      rendered:
+        '\n<p>Welcome to WordPress. This is your first post. Edit or delete it, then start writing!</p>\n\n\n\n<p>Well I had to enhance this little WP post a bit. Here&#8217;s a cool picture&#8230;</p>\n\n\n\n<figure class="wp-block-image size-large"><img src="https://unsplash.com/photos/WsBtj3RL0fs/download?force=true&amp;w=640" alt=""/><figcaption><a href="https://www.wizardingworld.com/" target="_blank" rel="noreferrer noopener">The Wizarding World</a>, Orlando, FL</figcaption></figure>\n',
+      protected: false,
+    },
+    excerpt: {
+      rendered:
+        '<p>Welcome to WordPress. This is your first post. Edit or delete it, then start writing! Well I had to enhance this little WP post a bit. Here&#8217;s a cool picture&#8230;</p>\n',
+      protected: false,
+    },
+    author: 1,
+    featured_media: 0,
+    comment_status: 'open',
+    ping_status: 'open',
+    sticky: false,
+    template: '',
+    format: 'standard',
+    meta: [],
+    categories: [1],
+    tags: [],
+    featured_image_src: null,
+    featured_image_src_square: null,
+    author_info: {
+      display_name: 'benhubert',
+      author_link: 'https://www.benoithubert.tk/author/benhubert/',
+    },
+    _links: {
+      self: [{ href: 'https://www.benoithubert.tk/wp-json/wp/v2/posts/1' }],
+      collection: [{ href: 'https://www.benoithubert.tk/wp-json/wp/v2/posts' }],
+      about: [{ href: 'https://www.benoithubert.tk/wp-json/wp/v2/types/post' }],
+      author: [
+        {
+          embeddable: true,
+          href: 'https://www.benoithubert.tk/wp-json/wp/v2/users/1',
+        },
+      ],
+      replies: [
+        {
+          embeddable: true,
+          href: 'https://www.benoithubert.tk/wp-json/wp/v2/comments?post=1',
+        },
+      ],
+      'version-history': [
+        {
+          count: 2,
+          href: 'https://www.benoithubert.tk/wp-json/wp/v2/posts/1/revisions',
+        },
+      ],
+      'predecessor-version': [
+        {
+          id: 15,
+          href:
+            'https://www.benoithubert.tk/wp-json/wp/v2/posts/1/revisions/15',
+        },
+      ],
+      'wp:attachment': [
+        { href: 'https://www.benoithubert.tk/wp-json/wp/v2/media?parent=1' },
+      ],
+      'wp:term': [
+        {
+          taxonomy: 'category',
+          embeddable: true,
+          href: 'https://www.benoithubert.tk/wp-json/wp/v2/categories?post=1',
+        },
+        {
+          taxonomy: 'post_tag',
+          embeddable: true,
+          href: 'https://www.benoithubert.tk/wp-json/wp/v2/tags?post=1',
+        },
+      ],
+      curies: [
+        { name: 'wp', href: 'https://api.w.org/{rel}', templated: true },
+      ],
+    },
+  },
 ];
 
-posts.forEach(post => {
-	post.html = post.html.replace(/^\t{3}/gm, '');
+posts.forEach((post) => {
+  post.content.rendered = post.content.rendered.replace(/^\t{3}/gm, '');
 });
 
 export default posts;

@@ -1,6 +1,6 @@
 <script context="module">
 	export function preload() {
-		return this.fetch(`https://www.benoithubert.tk/wp-json/wp/v2/posts`).then(r => r.json()).then(posts => {
+		return this.fetch(`index.json`).then(r => r.json()).then(posts => {
 			return { posts };
 		});
 	}
