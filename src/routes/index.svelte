@@ -1,50 +1,54 @@
+<script context="module">
+	export function preload() {
+		return this.fetch(`https://www.benoithubert.tk/wp-json/wp/v2/posts`).then(r => r.json()).then(posts => {
+			return { posts };
+		});
+	}
+</script>
+
 <script>
-	import successkid from 'images/successkid.jpg';
+	export let posts;
 </script>
 
 <style>
-	h1, figure, p {
-		text-align: center;
-		margin: 0 auto;
-	}
-
-	h1 {
-		font-size: 2.8em;
-		text-transform: uppercase;
-		font-weight: 700;
-		margin: 0 0 0.5em 0;
-	}
-
-	figure {
+	.posts {
 		margin: 0 0 1em 0;
+		line-height: 1.5;
 	}
 
-	img {
-		width: 100%;
-		max-width: 400px;
-		margin: 0 0 1em 0;
-	}
+  .posts h2 {
+    margin-top: 2em;
+  }
 
-	p {
-		margin: 1em auto;
-	}
+  .posts a {
+    padding: 0.375em 0.75em;
+    border-radius: 0.5em;
+    background: #07a;
+    color: #fff;
+    text-decoration: none;
+  }
 
-	@media (min-width: 480px) {
-		h1 {
-			font-size: 4em;
-		}
-	}
+.posts a:hover {
+  background: #08b;
+}
 </style>
 
 <svelte:head>
-	<title>Sapper project template</title>
+	<title>Blog</title>
 </svelte:head>
 
-<h1>Great success!</h1>
+<h1>Recent posts</h1>
 
-<figure>
-	<img alt="Success Kid" src="{successkid}">
-	<figcaption>Have fun with Sapper!</figcaption>
-</figure>
-
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
+<div class="posts">
+	{#each posts as post}
+		<!-- we're using the non-standard `rel=prefetch` attribute to
+				tell Sapper to load the data for the page as soon as
+				the user hovers over the link or taps it, instead of
+				waiting for the 'click' event -->
+		<article>
+      <h2>{post.title.rendered}</h2>
+      {@html post.content.rendered}
+      <a rel="prefetch" href="{post.id}">Read single page</a>
+    </article>
+	{/each}
+</div>

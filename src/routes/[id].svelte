@@ -2,7 +2,7 @@
 	export async function preload({ params }) {
 		// the `slug` parameter is available because
 		// this file is called [slug].svelte
-		const res = await this.fetch(`blog/${params.slug}.json`);
+		const res = await this.fetch(`https://www.benoithubert.tk/wp-json/wp/v2/posts/${params.id}`);
 		const data = await res.json();
 
 		if (res.status === 200) {
@@ -54,11 +54,11 @@
 </style>
 
 <svelte:head>
-	<title>{post.title}</title>
+	<title>{post.title.rendered}</title>
 </svelte:head>
 
-<h1>{post.title}</h1>
+<h1>{post.title.rendered}</h1>
 
 <div class="content">
-	{@html post.html}
+	{@html post.content.rendered}
 </div>
